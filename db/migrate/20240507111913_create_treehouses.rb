@@ -8,7 +8,7 @@ class CreateTreehouses < ActiveRecord::Migration[7.1]
 
       t.timestamps
 
-      t.references :user, foreign_key: true, null: false
+      t.references :user, null: false, foreign_key: true
 
       # add_reference :treehouses, :user, foreign_key: true, null: false
     end
