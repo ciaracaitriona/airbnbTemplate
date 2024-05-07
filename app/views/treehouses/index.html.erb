@@ -1,0 +1,13 @@
+<h1>List of all Treehouses</h1>
+<%= link_to "Create Treehouse", new_treehouse_path %>
+<div class="container">
+  <% @treehouses.each do |tree| %>
+  <div class="card">
+    <%= tree.name %>
+    <%= tree.rating %>
+    <%= tree.price %>
+    <%= tree.tree_type %>
+    <%= link_to "Show Treehouse", treehouse_path(tree) %>
+  <% end %>
+  </div>
+</div>
