@@ -3,7 +3,7 @@ User.destroy_all
 Treehouse.destroy_all
 
 tim = User.create(email: "tim@tim.com", password: "123123" )
-dave = User.create(email: "dave@dave.com", password: "123456" )
+dave = User.create(email: "dave@dave.com", password: "123456")
 dan = User.create(email: "dan@dan.com", password: "123456")
 
 

@@ -1,13 +1,25 @@
-<h1>List of all Treehouses</h1>
-<%= link_to "Create Treehouse", new_treehouse_path %>
-<div class="container">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1611990811697-204c28796f52?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+  List of Treehouses:
+</div>
+
+<div class="top-buttons">
+<button class="button-33" role="button"><%= link_to "Create Treehouse", new_treehouse_path %></button>
+<button class="button-33" role="button"><%= link_to "Show Bookings", bookings_path %></button>
+</div>
+
+<div class="treehouse-container">
   <% @treehouses.each do |tree| %>
-  <div class="card">
-    <%= tree.name %>
-    <%= tree.rating %>
-    <%= tree.price %>
-    <%= tree.tree_type %>
-    <%= link_to "Show Treehouse", treehouse_path(tree) %>
-  <% end %>
+  <div class="treehouse-card">
+    <img src="https://images.unsplash.com/photo-1513517147916-e77dd158b0a7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyZWVob3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+        <div class="treehouse-card-info">
+        <h3><%= tree.name.capitalize %></h3>
+        <p><%= tree.tree_type.capitalize %></p>
+        <p>Rating:  <%= tree.rating %> 🌳</p>
+        </div>
+        <div class="price">
+        <p>£ <%= tree.price %></p>
+        </div>
+      <%= link_to "Show Treehouse", treehouse_path(tree) %>
   </div>
+  <% end %>
 </div>
