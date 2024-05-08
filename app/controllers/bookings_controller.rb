@@ -19,7 +19,13 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.treehouse = @treehouse
     @booking.save
+    redirect_to treehouses_path
+  end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path
   end
 
   private

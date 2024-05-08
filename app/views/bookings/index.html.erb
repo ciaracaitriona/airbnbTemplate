@@ -3,14 +3,21 @@
 </div>
 
 <br>
-<%= link_to "Home", treehouses_path %>
+<button class="button-33" role="button"><%= link_to "Home", treehouses_path %>
+</button>
 
 <div class="container">
+
   <% @bookings.each do |booking| %>
-  <div class="card">
-  <p> <%= booking.treehouse.name.capitalize %></p>
+  <div class="booking-card">
+  <p>Congratulations, your booking to <strong><%= booking.treehouse.name.capitalize %></strong> is secured!</p>
+  <p>You will be staying:</p>
   <p>From: <%= booking.start_date%> Until: <%= booking.end_date%></p>
   <p> </p>
+   <p><%= link_to "Delete",
+    booking_path(booking),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %></p>
   </div>
   <% end %>
 </div>

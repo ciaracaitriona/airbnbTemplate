@@ -6,6 +6,13 @@ class TreehousesController < ApplicationController
 
   def show
     @treehouse = Treehouse.find(params[:id])
+    @marker = {lat: "", lng: ""}
+    @marker[:lat] = @treehouse.geocode[0]
+    @marker[:lng] = @treehouse.geocode[1]
+
+
+
+
   end
 
   def new
