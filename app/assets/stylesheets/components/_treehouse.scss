@@ -12,6 +12,8 @@
   height: 300px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
+  background-color: #606c38;
+  color: white;
 }
 
 .treehouse-card:hover {
@@ -28,13 +30,16 @@
 
 .treehouse-card-info {
   display: flex;
+  justify-content: space-between;
   position: relative;
 }
 
 
 .treehouse-card .price {
   display: flex;
-  right: 10px;
+  flex-direction: column;
+  float: right;
+  text-align: right;
 }
 
 
@@ -81,6 +86,21 @@
   background-size: cover;
   background-position: center;
   height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category-home {
+  background-size: cover;
+  background-position: center;
+  height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;

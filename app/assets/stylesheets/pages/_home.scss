@@ -2,11 +2,23 @@
 
 
 .container {
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
 }
 
 h1 {
-  color: #3a5a40;
-  font-family: $pinewood;
+  color: white;
+  font-family: $driftwood;
+}
+
+h2 {
+  color: black;
+  font-family: $driftwood;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  color: black;
+  justify-content: center;
 }
