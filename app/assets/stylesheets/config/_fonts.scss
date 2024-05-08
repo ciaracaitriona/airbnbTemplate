@@ -14,3 +14,39 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
      src: font-url('pinewood/Pinewood.ttf') format('truetype')
 }
 $pinewood: "Pinewood";
+
+@font-face {
+  font-family: "Driftwood";
+  // src: font-url('FontFile.eot');
+  // src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //      font-url('FontFile.woff') format('woff'),
+     src: font-url('fonts/Driftwood.ttf') format('truetype')
+}
+$driftwood: "Driftwood";
+
+@font-face {
+  font-family: "Pine-Forest";
+  // src: font-url('FontFile.eot');
+  // src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //      font-url('FontFile.woff') format('woff'),
+     src: font-url('fonts/Pine-Forest.otf') format('truetype')
+}
+$pineforest: "Pine-Forest";
+
+@font-face {
+  font-family: "Arturo-Regular";
+  // src: font-url('FontFile.eot');
+  // src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //      font-url('FontFile.woff') format('woff'),
+     src: font-url('fonts/Arturo-Regular.ttf') format('truetype')
+}
+$arturoreg: "Arturo-Regular";
+
+@font-face {
+  font-family: "KGRoyals";
+  // src: font-url('FontFile.eot');
+  // src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //      font-url('FontFile.woff') format('woff'),
+     src: font-url('fonts/KGRoyals.ttf') format('truetype')
+}
+$royals: "KGRoyals";
