@@ -1,0 +1,46 @@
+.show-treehouse {
+  display: flex;
+  border: dotted;
+  border-radius: 10px;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.show-treehouse #left {
+  height: 500px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.show-treehouse #topright {
+  height: 200px;
+  width: 60%;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.show-treehouse #bottomright {
+  height: 200px;
+  width: 60%;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+.show-treehouse-info{
+  margin-right: 50px;
+  bottom: 5px;
+  border: dotted;
+}
+
+
+.price-show {
+  border: dotted;
+  font-size: larger;
+}
+
+
+.show-container {
+  width: 700px;
+  margin: 0 auto;
+}
