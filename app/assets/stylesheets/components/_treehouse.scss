@@ -26,20 +26,15 @@
 }
 
 
-.treehouse-card .info {
-
+.treehouse-card-info {
   display: flex;
-
   position: relative;
 }
 
 
 .treehouse-card .price {
-  padding: 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  right: 10px;
 }
 
 

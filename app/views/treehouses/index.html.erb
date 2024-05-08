@@ -11,14 +11,14 @@
   <% @treehouses.each do |tree| %>
   <div class="treehouse-card">
     <img src="https://images.unsplash.com/photo-1513517147916-e77dd158b0a7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyZWVob3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
-      <div class="info">
+        <div class="treehouse-card-info">
         <h3><%= tree.name.capitalize %></h3>
         <p><%= tree.tree_type.capitalize %></p>
-      </div>
-      <div class="price">
-        <p>Rating:  <%= tree.rating %> ⭐</p>
+        <p>Rating:  <%= tree.rating %> 🌳</p>
+        </div>
+        <div class="price">
         <p>£ <%= tree.price %></p>
-      </div>
+        </div>
       <%= link_to "Show Treehouse", treehouse_path(tree) %>
   </div>
   <% end %>
