@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :treehouses
   has_many :bookings
+  has_many :reviews
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 

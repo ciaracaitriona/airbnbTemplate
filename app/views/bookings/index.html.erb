@@ -18,6 +18,7 @@
     booking_path(booking),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %></p>
+  <%= link_to "add Review", new_booking_review_path(booking) %>
   </div>
   <% end %>
 </div>

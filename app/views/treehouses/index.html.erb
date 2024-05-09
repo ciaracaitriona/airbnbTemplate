@@ -5,7 +5,24 @@
 <div class="top-buttons">
 <button class="button-33" role="button"><%= link_to "Create Treehouse", new_treehouse_path %></button>
 <button class="button-33" role="button"><%= link_to "Show Bookings", bookings_path %></button>
+<button class="btn btn-success" role="button"><%= link_to "See Our Treehouses", treehouses_path, class: "text-decoration-none text-white"  %></div>
+
 </div>
+
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: treehouses_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for your treehouse"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+
+
 
 <div class="treehouse-container">
   <% @treehouses.each do |tree| %>
@@ -18,7 +35,7 @@
           <p class="mb-0">Rating: <%= tree.rating %> 🌳</p>
         </div>
         <div class="price mx-4">
-          <p>£<%= tree.price %></p>
+          <p>£<%= tree.price %> per night</p>
           <p class="btn btn-success" role="button"><%= link_to "Show Treehouse", treehouse_path(tree), class: "text-decoration-none text-white" %></p>
         </div>
       </div>
