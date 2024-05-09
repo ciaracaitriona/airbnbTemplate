@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @treehouse = Treehouse.find(params[:treehouse_id])
     @booking.user = current_user
     @booking.treehouse = @treehouse
+    @review = @booking.treehouse.review
     @booking.save
     redirect_to treehouses_path
   end

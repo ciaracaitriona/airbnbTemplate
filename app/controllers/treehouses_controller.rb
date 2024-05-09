@@ -2,6 +2,13 @@ class TreehousesController < ApplicationController
 
   def index
     @treehouses = Treehouse.all
+    if params[:query].present?
+      sql_subquery = <<~SQL
+        treehouses.name @@ :query
+        OR treehouses.location @@ :query
+      SQL
+      @treehouses = @treehouses.where(sql_subquery, query: params[:query])
+    end
   end
 
   def show
@@ -9,8 +16,8 @@ class TreehousesController < ApplicationController
     @marker = {lat: "", lng: ""}
     @marker[:lat] = @treehouse.geocode[0]
     @marker[:lng] = @treehouse.geocode[1]
-
-
+    @bookings = @treehouse.bookings
+    @reviews = @treehouse.reviews
 
 
   end
