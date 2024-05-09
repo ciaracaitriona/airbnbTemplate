@@ -31,6 +31,8 @@
 .price-show {
   border: dotted;
   font-size: larger;
+  text-align: center;
+  justify-content: center;
 }
 
 
@@ -44,18 +46,40 @@
   border: dotted;
   flex-wrap: wrap;
   display: flex;
-  height: 300px;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 30px;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 
-.info{
+.info-and-booking p{
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+}
+
+.info {
   border: dotted;
 }
+
 
 .form-booking {
 
  border: dotted;
  width: 300px;
  padding: 15px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.info-reviews {
+  border: dotted;
+  font-size: 40px;
+}
+
+.info-reviews a {
+  color: black;
+
 }

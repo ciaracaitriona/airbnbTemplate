@@ -1,7 +1,7 @@
 .review-container {
   display: flex;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   flex-direction: row;
   border: dotted;
   flex-wrap: wrap;
@@ -16,6 +16,7 @@
  height: 200px;
  width: 45%;
  border-radius: 10px;
+ margin: 5px;
 }
 
 .review-text {
@@ -42,7 +43,6 @@
   top: 0px;
   right: 0px;
   text-align: center;
-  background-color: adjust-hue($color: #a7e294, $degrees: 0);
 }
 
 .review-number p {

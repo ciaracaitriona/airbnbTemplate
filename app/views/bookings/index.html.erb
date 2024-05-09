@@ -2,9 +2,10 @@
   My Bookings:
 </div>
 
-<br>
-<button class="button-33" role="button"><%= link_to "Home", treehouses_path %>
-</button>
+ <div class="top-buttons">
+  <button class="btn btn-success" role="button"><%= link_to "Home", treehouses_path, class: "text-decoration-none text-white" %>
+  </button>
+  </div>
 
 <div class="container">
 
@@ -18,7 +19,7 @@
     booking_path(booking),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %></p>
-  <%= link_to "add Review", new_booking_review_path(booking) %>
+  <%= link_to "Add Review", new_booking_review_path(booking) %>
   </div>
   <% end %>
 </div>

@@ -1,12 +1,12 @@
 <div class="show-page" style="position: relative;">
   <div class="top-buttons">
-  <button class="button-33" role="button"><%= link_to "Home", treehouses_path %>
+  <button class="btn btn-success" role="button"><%= link_to "Home", treehouses_path, class: "text-decoration-none text-white" %>
   </button>
   </div>
 
 
     <div class="form-booking position-fixed top-10 end-0 me-5" data-controller="toggle">
-      <button data-action="click->toggle#fire" class="btn btn-outline-primary">Book now!</button>
+      <button data-action="click->toggle#fire" class="btn btn-success text-decoration-none text-white" >Book now!</button>
       <div data-toggle-target="element" class="d-none">
         <%= render "shared/booking_form" %>
       </div>
@@ -30,11 +30,18 @@
 
   <div class="info-and-booking">
     <div class="info">
-      <p>Your host is: <strong><%= @treehouse.user.email %></strong></p>
+      <h3><strong><%= @treehouse.name %></strong></h3>
+      <p>No. of guests <%= @treehouse.guests %></p>
+      <p>Your host is: <strong><%= @treehouse.user.first_name %></strong></p>
       <p>You'll be staying in a <%= @treehouse.tree_type.capitalize %> tree</p>
       <p>Location: <%= @treehouse.location %></p>
-      <p class="price-show">£ <%= @treehouse.price %> per night</p>
     </div>
+
+    <div class="info-reviews">
+      <a href="#reviews"><%= @treehouse.reviews.count %> Reviews</a>
+    </div>
+
+    <p class="price-show">£ <%= @treehouse.price %> per night</p>
 
 
 
@@ -43,7 +50,8 @@
   <h2>Description:</h2>
   <p><%= @treehouse.description %></p>
 
-<h2>Location:</h2>
+<h2>Where you will be staying:</h2>
+<p>You will be nested in the heart of <%= @treehouse.location %>:</p>
 
 <div style="width: 100%; height: 600px;"
   data-controller="map"
@@ -51,14 +59,14 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 
-<h2>Reviews:</h2>
+<h2 class="mt-5">Reviews:</h2>
 
 
-<div class="review-container">
+<div class="review-container" id="reviews">
   <% @reviews.each do |review| %>
   <div class="review-card">
     <div class="review-number">
-      <p>🌳<%= review.rating %>🌳</p>
+      <p><%= review.rating %></p>
     </div>
     <div class="review-text">
       <h3><%= review.title %></h3>
