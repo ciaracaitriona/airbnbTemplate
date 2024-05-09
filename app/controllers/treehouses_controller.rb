@@ -18,6 +18,7 @@ class TreehousesController < ApplicationController
     @marker[:lng] = @treehouse.geocode[1]
     @bookings = @treehouse.bookings
     @reviews = @treehouse.reviews
+    @booking = Booking.new
 
 
   end

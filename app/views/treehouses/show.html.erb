@@ -1,8 +1,16 @@
-<div class="top-buttons">
-<button class="button-33" role="button"><%= link_to "Home", treehouses_path %>
-</button>
-</div>
+<div class="show-page" style="position: relative;">
+  <div class="top-buttons">
+  <button class="button-33" role="button"><%= link_to "Home", treehouses_path %>
+  </button>
+  </div>
 
+
+    <div class="form-booking position-fixed top-10 end-0 me-5" data-controller="toggle">
+      <button data-action="click->toggle#fire" class="btn btn-outline-primary">Book now!</button>
+      <div data-toggle-target="element" class="d-none">
+        <%= render "shared/booking_form" %>
+      </div>
+    </div>
 
 <div class="show-container">
 
@@ -20,15 +28,18 @@
 
 
 
-  <div class="info-and-booking>
-    <div class="show-treehouse-info">
+  <div class="info-and-booking">
+    <div class="info">
+      <p>Your host is: <strong><%= @treehouse.user.email %></strong></p>
       <p>You'll be staying in a <%= @treehouse.tree_type.capitalize %> tree</p>
-      <p>Rating: <%= @treehouse.rating %></p>
       <p>Location: <%= @treehouse.location %></p>
-      <p class="price-show">£ <%= @treehouse.price %></p>
+      <p class="price-show">£ <%= @treehouse.price %> per night</p>
     </div>
-    <button class="button-33" role="button"><%= link_to "Book", new_treehouse_booking_path(@treehouse)%>
-    </button>
+
+
+
+  </div>
+
   <h2>Description:</h2>
   <p><%= @treehouse.description %></p>
 
@@ -55,6 +66,8 @@
     </div>
   </div>
 <% end %>
+</div>
+
 </div>
 
 </div>
