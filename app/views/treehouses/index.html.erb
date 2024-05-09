@@ -3,8 +3,8 @@
 </div>
 
 <div class="top-buttons">
-<button class="button-33" role="button"><%= link_to "Create Treehouse", new_treehouse_path %></button>
-<button class="button-33" role="button"><%= link_to "Show Bookings", bookings_path %></button>
+<button class="btn btn-success" role="button"><%= link_to "Create Treehouse", new_treehouse_path, class: "text-decoration-none text-white" %></button>
+<button class="btn btn-success" role="button"><%= link_to "Show Bookings", bookings_path, class: "text-decoration-none text-white" %></button>
 <button class="btn btn-success" role="button"><%= link_to "See Our Treehouses", treehouses_path, class: "text-decoration-none text-white"  %></div>
 
 </div>
@@ -17,7 +17,7 @@
             class: "form-control",
             placeholder: "Search for your treehouse"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <%= submit_tag "Search", name: "", class: "btn btn-success text-decoration-none text-white" %>
     <% end %>
   </div>
 

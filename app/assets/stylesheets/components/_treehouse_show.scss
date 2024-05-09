@@ -27,12 +27,6 @@
 }
 
 
-.show-treehouse-info{
-  margin-right: 50px;
-  bottom: 5px;
-  border: dotted;
-}
-
 
 .price-show {
   border: dotted;
@@ -41,6 +35,27 @@
 
 
 .show-container {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
+}
+
+
+.info-and-booking {
+  border: dotted;
+  flex-wrap: wrap;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.info{
+  border: dotted;
+}
+
+.form-booking {
+
+ border: dotted;
+ width: 300px;
+ padding: 15px;
 }

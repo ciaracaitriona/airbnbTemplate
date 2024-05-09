@@ -1,8 +1,16 @@
-<div class="top-buttons">
-<button class="button-33" role="button"><%= link_to "Home", treehouses_path %>
-</button>
-</div>
+<div class="show-page" style="position: relative;">
+  <div class="top-buttons">
+  <button class="button-33" role="button"><%= link_to "Home", treehouses_path %>
+  </button>
+  </div>
 
+
+    <div class="form-booking position-fixed top-10 end-0 me-5" data-controller="toggle">
+      <button data-action="click->toggle#fire" class="btn btn-outline-primary">Book now!</button>
+      <div data-toggle-target="element" class="d-none">
+        <%= render "shared/booking_form" %>
+      </div>
+    </div>
 
 <div class="show-container">
 
@@ -20,15 +28,18 @@
 
 
 
-  <div class="info-and-booking>
-    <div class="show-treehouse-info">
+  <div class="info-and-booking">
+    <div class="info">
+      <p>Your host is: <strong><%= @treehouse.user.email %></strong></p>
       <p>You'll be staying in a <%= @treehouse.tree_type.capitalize %> tree</p>
-      <p>Rating: <%= @treehouse.rating %></p>
       <p>Location: <%= @treehouse.location %></p>
-      <p class="price-show">£ <%= @treehouse.price %></p>
+      <p class="price-show">£ <%= @treehouse.price %> per night</p>
     </div>
-    <button class="button-33" role="button"><%= link_to "Book", new_treehouse_booking_path(@treehouse)%>
-    </button>
+
+
+
+  </div>
+
   <h2>Description:</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed odio morbi quis commodo odio aenean sed adipiscing diam. Commodo elit at imperdiet dui accumsan sit amet nulla. Eros in cursus turpis massa tincidunt dui. Pretium lectus quam id leo in vitae. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Porttitor massa id neque aliquam vestibulum. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Vitae nunc sed velit dignissim sodales ut eu sem. Lobortis feugiat vivamus at augue. Porttitor massa id neque aliquam vestibulum. Donec enim diam vulputate ut pharetra sit. Ac tortor vitae purus faucibus ornare suspendisse sed.
   Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Enim ut tellus elementum sagittis. Risus feugiat in ante metus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Interdum posuere lorem ipsum dolor sit amet. Est sit amet facilisis magna etiam tempor. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Vitae congue eu consequat ac. Et pharetra pharetra massa massa. Fermentum leo vel orci porta non pulvinar. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci. Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Ultrices vitae auctor eu augue ut.
@@ -57,6 +68,8 @@
     </div>
   </div>
 <% end %>
+</div>
+
 </div>
 
 </div>
