@@ -1,6 +1,12 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1611990811697-204c28796f52?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
   New Treehouse:
 </div>
+
+ <div class="top-buttons">
+  <button class="btn btn-success" role="button"><%= link_to "Home", treehouses_path, class: "text-decoration-none text-white" %>
+  </button>
+  </div>
+
 <br>
 <div class="container">
 <%= simple_form_for [@treehouse] do |f| %>

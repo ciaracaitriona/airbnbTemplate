@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.treehouse = @treehouse
     @booking.save
-    redirect_to treehouses_path
+    redirect_to bookings_path
   end
 
   def destroy
