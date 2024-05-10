@@ -7,8 +7,10 @@
 
     <div class="form-booking position-fixed top-10 end-0 me-5" data-controller="toggle">
       <button data-action="click->toggle#fire" class="btn btn-success text-decoration-none text-white" >Book now!</button>
-      <div data-toggle-target="element" class="d-none">
-        <%= render "shared/booking_form" %>
+      <%# <div class="mt-3 bg-light text-dark" class="rounded" > %>
+      <div data-toggle-target="element" class="d-none p-2 mt-1 bg-light text-dark rounded">
+        <%= render "shared/booking_form"%>
+      </div>
       </div>
     </div>
 
