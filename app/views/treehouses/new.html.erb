@@ -3,7 +3,7 @@
 </div>
 
  <div class="top-buttons">
-  <button class="btn btn-success" role="button"><%= link_to "Home", treehouses_path, class: "text-decoration-none text-white" %>
+  <button class="btn btn-success" role="button"><%= link_to "Back to Treehouses", treehouses_path, class: "text-decoration-none text-white" %>
   </button>
   </div>
 
@@ -15,6 +15,6 @@
     <%= f.input :tree_type %>
     <%= f.input :price %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit "Submit review", class: "btn btn-primary" %>
+    <%= f.submit "Submit review", class: "btn btn-success" %>
 <% end %>
 </div>

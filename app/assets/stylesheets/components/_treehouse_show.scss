@@ -43,7 +43,6 @@
 
 
 .info-and-booking {
-  border: dotted;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
@@ -52,22 +51,24 @@
   margin-bottom: 30px;
 }
 
-.info-and-booking p{
+.info-and-booking p {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
 }
 
 .info {
-  border: dotted;
 }
 
 
 .form-booking {
-
- border: dotted;
  width: 300px;
  padding: 15px;
 }
 
+.review-container {
+
+  display: flex;
+  flex-wrap: wrap;
+}
 
 html {
   scroll-behavior: smooth;
@@ -75,11 +76,16 @@ html {
 
 
 .info-reviews {
-  border: dotted;
-  font-size: 40px;
+  font-size: 15px;
 }
 
 .info-reviews a {
   color: black;
 
+}
+
+.review-number {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
 }

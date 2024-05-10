@@ -1,3 +1,4 @@
+Booking.destroy_all
 Treehouse.destroy_all
 User.destroy_all
 

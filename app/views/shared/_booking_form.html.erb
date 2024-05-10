@@ -1,5 +1,8 @@
-<%= simple_form_for [@treehouse, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Submit Booking", class: "btn btn-primary" %>
-<% end %>
+<div data-controller="booking-form" data-booking-form-price-value="<%= @treehouse.price %>">
+  <%= simple_form_for [@treehouse, @booking] do |f| %>
+    <%= f.input :guests %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit "Submit Booking", class: "btn btn-success" %>
+  <% end %>
+</div>

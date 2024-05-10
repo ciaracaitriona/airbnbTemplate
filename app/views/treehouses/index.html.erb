@@ -1,10 +1,10 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1611990811697-204c28796f52?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
-  List of Treehouses:
+  Our Treehouses
 </div>
 
 <div class="top-buttons">
-<button class="btn btn-success" role="button"><%= link_to "Create Treehouse", new_treehouse_path, class: "text-decoration-none text-white" %></button>
-<button class="btn btn-success" role="button"><%= link_to "Show Bookings", bookings_path, class: "text-decoration-none text-white" %></button>
+<button class="btn btn-success" role="button"><%= link_to "Add Your Treehouse", new_treehouse_path, class: "text-decoration-none text-white" %></button>
+<button class="btn btn-success" role="button"><%= link_to "My Bookings", bookings_path, class: "text-decoration-none text-white" %></button>
 <button class="btn btn-success" role="button"><%= link_to "See Our Treehouses", treehouses_path, class: "text-decoration-none text-white"  %></div>
 
 </div>
@@ -15,7 +15,7 @@
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "Search for your treehouse"
+            placeholder: "Search Our Treehouses"
         %>
       <%= submit_tag "Search", name: "", class: "btn btn-success text-decoration-none text-white" %>
     <% end %>
@@ -27,8 +27,8 @@
 <div class="treehouse-container">
   <% @treehouses.each do |tree| %>
   <div class="treehouse-card">
-    <%# <%= cl_image_tag tree.photo.key, height: 300, width: 400, crop: :fill %> %>
-    <img src="https://images.unsplash.com/photo-1513517147916-e77dd158b0a7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyZWVob3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+    <%= cl_image_tag tree.photo.key, height: 300, width: 400, crop: :fill %>
+    <%# <img src="https://images.unsplash.com/photo-1513517147916-e77dd158b0a7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyZWVob3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt=""> %>
       <div class="treehouse-card-info mx-4 mt-2">
         <div>
           <h3 class="mb-0"><%= tree.name.capitalize %></h3>
@@ -37,7 +37,7 @@
         </div>
         <div class="price mx-4">
           <p>£<%= tree.price %> per night</p>
-          <p class="btn btn-success" role="button"><%= link_to "Show Treehouse", treehouse_path(tree), class: "text-decoration-none text-white" %></p>
+          <p class="btn btn-success" role="button"><%= link_to "Explore this Treehouse", treehouse_path(tree), class: "text-decoration-none text-white" %></p>
         </div>
       </div>
   </div>

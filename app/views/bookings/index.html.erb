@@ -3,23 +3,28 @@
 </div>
 
  <div class="top-buttons">
-  <button class="btn btn-success" role="button"><%= link_to "Home", treehouses_path, class: "text-decoration-none text-white" %>
+  <button class="btn btn-success" role="button"><%= link_to "Back to Treehouses", treehouses_path, class: "text-decoration-none text-white" %>
   </button>
   </div>
 
 <div class="container">
 
   <% @bookings.each do |booking| %>
-  <div class="booking-card">
-  <p>Congratulations, your booking to <strong><%= booking.treehouse.name.capitalize %></strong> is secured!</p>
-  <p>You will be staying:</p>
-  <p>From: <%= booking.start_date%> Until: <%= booking.end_date%></p>
-  <p> </p>
-   <p><%= link_to "Delete",
-    booking_path(booking),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %></p>
-  <%= link_to "Add Review", new_booking_review_path(booking) %>
-  </div>
+    <div class="booking-card">
+    <div class="booking-card-info">
+    <p>Congratulations, your booking to <strong><%= booking.treehouse.name.capitalize %></strong> is secured!</p>
+    <p>You will be staying:</p>
+    <p>From: <%= booking.start_date%> Until: <%= booking.end_date%></p>
+    <p> </p>
+    <p><%= link_to "Delete",
+      booking_path(booking),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-success"
+    %></p>
+    <%= link_to "Add Review", new_booking_review_path(booking), class: "btn btn-success" %>
+    </div>
+      <div class="booking-card-img">
+        <img src="https://media.istockphoto.com/id/1371148606/vector/confirmed-rubber-business-stamp.jpg?s=612x612&w=0&k=20&c=wAtWMe_1n88w2l9iU47vex22x2Lk24echF2u9zePhC0=" alt="">
+      </div>
+    </div>
   <% end %>
 </div>
