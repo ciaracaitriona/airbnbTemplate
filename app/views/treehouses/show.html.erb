@@ -1,6 +1,13 @@
 <div class="show-page" style="position: relative;">
 
-    <div class="form-booking position-fixed top-10 end-0 me-5" data-controller="toggle">
+  <div class="top-buttons mb-3">
+  <button class="btn btn-success" role="button"><%= link_to "Back to Treehouses", treehouses_path, class: "text-decoration-none text-white" %>
+  </button>
+  </div>
+
+
+
+    <div class="form-booking position-fixed top-10 end-0 me-5 btn-lg" data-controller="toggle">
       <button data-action="click->toggle#fire" class="btn btn-success text-decoration-none text-white" >Book now!</button>
       <div data-toggle-target="element" class="d-none">
         <%= render "shared/booking_form" %>
@@ -9,7 +16,9 @@
 
 <div class="show-container">
 
+
   <h1 class="show-title"><%= @treehouse.name.capitalize %></h1>
+
 
   <div class="show-treehouse w-100">
     <img id="left" src="https://images.unsplash.com/photo-1573790285658-87d7586eec7d?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
@@ -48,22 +57,27 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 
-<h2 class="mt-5">Reviews:</h2>
 
 
-<div class="review-container" id="reviews">
-  <% @reviews.each do |review| %>
-  <div class="review-card">
-    <div class="review-number">
-      <p><%= review.rating %></p>
-    </div>
-    <div class="review-text">
-      <h3><%= review.title %></h3>
-      <p><%= review.content %></p>
-    </div>
+<h2 class="mt-4">Reviews:</h2>
+  <div class="review-container" id="reviews">
+    <% @reviews.each do |review| %>
+      <div class="review-card">
+        <div class="review-number">
+          <div>
+          <p><%= review.created_at.strftime("Created on %m/%d/%Y") %></p>
+          </div>
+          <div>
+            <h3><%= review.rating %></h3>
+          </div>
+        </div>
+        <div class="review-text">
+          <h3>''<%= review.title %>....</h3>
+          <p><%= review.content %>''</p>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 
 </div>
 

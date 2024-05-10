@@ -3,7 +3,6 @@
   padding: 20px;
   margin-top: 30px;
   flex-direction: row;
-  border: dotted;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -12,15 +11,16 @@
  background-color: white;
  display: flex;
  flex-direction: column;
- border: dotted;
  height: 200px;
  width: 45%;
  border-radius: 10px;
  margin: 5px;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+ border-radius: 5px;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .review-text {
- border: dotted;
  height: 100%;
  padding: 5px;
 }
@@ -37,7 +37,6 @@
  }
 
 .review-number {
-  border: dotted;
   height: 20%;
   width: 100%;
   top: 0px;
@@ -46,6 +45,13 @@
 }
 
 .review-number p {
+  font: 0.9rem "Sedan SC", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.review-number h3 {
   font: 1.6rem "Sedan SC", sans-serif;
   font-weight: bold;
   font-style: italic;
