@@ -28,7 +28,7 @@
   <% @treehouses.each do |tree| %>
   <div class="treehouse-card">
     <%= cl_image_tag tree.photo.key, height: 300, width: 400, crop: :fill %>
-    <%# <img src="https://images.unsplash.com/photo-1513517147916-e77dd158b0a7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyZWVob3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt=""> %>
+
       <div class="treehouse-card-info mx-4 mt-2">
         <div>
           <h3 class="mb-0"><%= tree.name.capitalize %></h3>

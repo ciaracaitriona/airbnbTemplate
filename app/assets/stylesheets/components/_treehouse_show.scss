@@ -1,6 +1,16 @@
+.show-title {
+  margin-top: 20px;
+  color: black;
+}
+
+li a {
+  color: black;
+
+}
+
 .show-treehouse {
   display: flex;
-  border: dotted;
+  // border: dotted;
   border-radius: 10px;
   object-fit: cover;
   padding: 5px;
@@ -13,20 +23,20 @@
 }
 
 .show-treehouse #topright {
-  height: 200px;
-  width: 60%;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
   padding: 5px;
   border-radius: 10px;
 }
 
 .show-treehouse #bottomright {
-  height: 200px;
-  width: 60%;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
   padding: 5px;
   border-radius: 10px;
 }
-
-
 
 .price-show {
   border: dotted;
@@ -35,7 +45,6 @@
   justify-content: center;
 }
 
-
 .show-container {
   width: 800px;
   margin: 0 auto;
@@ -43,6 +52,7 @@
 
 
 .info-and-booking {
+
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
@@ -55,6 +65,7 @@
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
 }
 
+
 .info {
 }
 
@@ -62,6 +73,7 @@
 .form-booking {
  width: 300px;
  padding: 15px;
+
 }
 
 .review-container {

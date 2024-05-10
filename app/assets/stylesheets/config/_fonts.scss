@@ -50,3 +50,12 @@ $arturoreg: "Arturo-Regular";
      src: font-url('fonts/KGRoyals.ttf') format('truetype')
 }
 $royals: "KGRoyals";
+
+@font-face {
+  font-family: "Heavitas";
+  // src: font-url('FontFile.eot');
+  // src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //      font-url('FontFile.woff') format('woff'),
+     src: font-url('fonts/Heavitas.ttf') format('truetype')
+}
+$heavitas: "Heavitas";
